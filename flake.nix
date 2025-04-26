@@ -29,6 +29,13 @@
         '';
         path = ./standard;
       };
+      wsl = {
+        description = ''
+          WSL based on Minimal flake - contains only the configs.
+          Contains the bare minimum to migrate your existing legacy configs to flakes.
+        '';
+        path = ./wsl;
+      };
     };
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
   };
